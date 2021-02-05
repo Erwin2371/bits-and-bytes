@@ -1,0 +1,425 @@
+:root {
+  --primaryColor: #776987;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.15rem;
+  --mainTransition: all 0.3s linear;
+}
+
+/*Product Detail Page Style*/
+.product-detail {
+  float: left;
+  width: 100%;
+  padding: 45px 0;
+}
+.product-detail h3 {
+  font-size: 24px;
+  padding: 15px 0;
+}
+.product-detail-left {
+  float: left;
+  width: 40%;
+}
+.product-detail-right {
+  float: right;
+  width: 55%;
+}
+.product-detail-right h3 {
+  font-size: 22px;
+  line-height: 24px;
+  padding-top: 0;
+}
+.product-detail-right h3 small {
+  font-size: 14px;
+  color: gray;
+}
+.product-detail-right h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: gray;
+}
+.product-detail-right h5 b {
+  color: #000;
+}
+.product-detail-right .addtocart {
+  border: 1px solid;
+  color: #f71111;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.product-detail-right .writereview {
+  border: 1px solid;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.product-detail-right .buynow {
+  border: 1px solid var(--primaryColor);
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 4px;
+  margin-top: 20px;
+  width: 60%;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid var(--primaryColor);
+  transition: all 0.3s linear;
+}
+
+.product-detail-right .buynow:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+.product-detail-feature {
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #cadde8;
+}
+.product-detail-feature h3 {
+  font-weight: 500;
+  border-bottom: 1px solid;
+}
+.product-detail-feature p {
+  padding: 15px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #dedede;
+  width: 50%;
+  float: left;
+}
+.product-detail .sp-wrap {
+  max-width: 100%;
+}
+.product-detail-left img {
+  max-width: inherit;
+}
+
+/* Needed for the lightbox */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* CSS for the loading div */
+
+.sp-loading {
+  text-align: center;
+  max-width: 270px;
+  padding: 15px;
+  border: 5px solid #eee;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Element wrapper */
+
+.sp-wrap {
+  line-height: 0;
+  font-size: 0;
+  background: #eee;
+  border: 5px solid #eee;
+  border-radius: 3px;
+  position: relative;
+  margin: 0 25px 15px 0;
+  float: left;
+  /**************
+	  Set max-width to your thumbnail width
+	***************/
+
+  max-width: 300px;
+}
+
+/* Thumbnails */
+
+.sp-thumbs {
+  text-align: left;
+  display: inline-block;
+}
+.sp-thumbs img {
+  min-height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+.sp-thumbs a:link,
+.sp-thumbs a:visited {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  opacity: 0.3;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.sp-thumbs a:hover {
+  opacity: 1;
+}
+
+/* Styles for the currently selected thumbnail */
+
+.sp-thumbs a:active,
+.sp-current {
+  opacity: 1 !important;
+  position: relative;
+}
+
+/* Image currently being viewed */
+
+.sp-large {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.sp-large a img {
+  max-width: 100%;
+  height: auto;
+}
+.sp-large a {
+  display: block;
+}
+
+/* Panning Zoomed Image */
+
+.sp-zoom {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+  display: none;
+}
+/* Lightbox */
+
+.sp-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 500;
+  display: none;
+  cursor: pointer;
+}
+.sp-lightbox img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid #fff;
+}
+#sp-prev,
+#sp-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 501;
+  color: #fff;
+  padding: 14px;
+  text-decoration: none;
+  background: #000;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+#sp-prev {
+  left: 10px;
+}
+#sp-prev:before {
+  content: "";
+  border: 7px solid transparent;
+  border-right: 15px solid #fff;
+  position: absolute;
+  top: 16px;
+  left: 7px;
+}
+#sp-next {
+  right: 10px;
+}
+#sp-next:before {
+  content: "";
+  border: 7px solid transparent;
+  border-left: 15px solid white;
+  position: absolute;
+  top: 16px;
+  left: 18px;
+}
+#sp-prev:hover,
+#sp-next:hover {
+  background: #444;
+}
+
+/* Tweak styles for small viewports */
+
+@media screen and (max-width: 400px) {
+  .sp-wrap {
+    margin: 0 0 15px 0;
+  }
+  #sp-prev,
+  #sp-next {
+    top: auto;
+    margin-top: 0;
+    bottom: 25px;
+  }
+}
+
+/*Checkout Style*/
+.checkout {
+  float: left;
+  width: 100%;
+  padding: 45px 0;
+}
+.checkout h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  border-bottom: 1px solid;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.checkout-inner {
+  width: 70%;
+  float: left;
+  border-right: 1px solid #c5c5c5;
+  padding-right: 25px;
+}
+.checkout-form-steps {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+}
+.checkout-form-steps h4 {
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid;
+  color: #ff9800;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+.checkout-form-steps .textfield {
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  border: 2px solid #d0d0d0;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+}
+.checkout-form-steps .textfield:focus,
+.checkout-form-steps label:hover {
+  border-color: #ffa800;
+}
+.checkout-form-steps label {
+  width: 100%;
+  float: left;
+  border: 2px solid #d0d0d0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+}
+.submitorder-button {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border: 1px solid var(--primaryColor);
+  transition: all 0.3s linear;
+  cursor: pointer;
+  float: right;
+}
+
+.submitorder-button:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+/*Order List Style*/
+.orderlist {
+  width: 28%;
+  float: right;
+}
+.orderlist h3 {
+  font-size: 18px;
+  padding: 15px 0;
+  line-height: 22px;
+}
+.orderlist img {
+  position: relative;
+  padding: 5px;
+  width: 360px;
+}
+.orderlist p {
+  padding: 15px 10px;
+  background-color: #00000010;
+  font-size: 18px;
+  border-bottom: 1px solid #00000020;
+}
+.orderlist p span {
+  float: right;
+}
+.orderlist .textfield {
+  width: 100%;
+  height: 45px;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border: 1px solid #00000040;
+  font-size: 16px;
+}
+.orderlist .applycode-button {
+  width: 100%;
+  height: 45px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  border: 1px solid var(--primaryColor);
+  transition: all 0.3s linear;
+  font-size: 16px;
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+
+.orderlist .applycode-button:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}

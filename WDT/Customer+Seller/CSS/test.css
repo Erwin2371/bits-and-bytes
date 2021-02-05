@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .logout {
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+  }
+  .logout a {
+    text-decoration: none;
+    font-size: 15px;
+    background:#3685B5;
+    color: #0D1B2A;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 5px;
+  }
+  .logout a:hover {
+    color: #C1DFF0;
+    transition: 0.5s;
+    background: #3685B5;
+    opacity: 0.8;
+  }
+  body {
+    background: #0D1B2A;
+    height: 800px; 
+  }
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  body::-webkit-scrollbar-track {
+    border-radius: 20px
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #D4F5F5;
+    border-radius: 20px;
+  }
+  body::-webkit-scrollbar-thumb:hover{
+    background: rgba(212, 245, 245, 0.5); 
+  }
+  .logo {
+    position: absolute;
+    color: #C1DFF0;
+    font-weight: bold;
+    top: 10px;
+    right: 180px;
+  }
+  .logo img {
+    position: absolute;
+    width: 175px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .button {
+    position: fixed;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+  }
+  .button.click {
+    left: 260px;
+  }
+  .button span{
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .button.click span:before {
+    content: '\f00d';
+  }
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    background: #0D1B2A;
+    transition: left 0.4s ease;
+  }
+  .sidebar.show {
+    left: 0px;
+  }
+  .sidebar .text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background: #102D41;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    background: #040B10;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  nav ul li {
+    line-height: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  nav ul li.active a {
+    color: #FFFD82;
+    background: #040B10;
+    border-left-color: #FFFD82;
+  }
+  nav ul li a:hover {
+    background: #04193d;
+  }
+  nav ul ul {
+    position: static;
+    display: none;
+  }
+  nav ul .pro-show.show {
+    display: block;
+  }
+  nav ul .ord-show.show1 {
+    display: block;
+  }
+  nav ul ul li {
+    line-height: 42px;
+    border-top: none;
+  }
+  nav ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+  }
+  nav ul li.active ul li a {
+    color: #e6e6e6;
+    background: #0D1B2A;
+    border-left-color: transparent;
+  }
+  nav ul ul li a:hover {
+    color: #FFFD82!important;
+    background: #0D1B2A!important;
+  }
+  nav ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+  }
+  nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  .container {
+      margin-top: 150px;
+      background-color: #174D64;
+      width: 1000px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50px;
+      padding-bottom: 30px;
+  }
+  form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0rem 5rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+  }
+.sign-up-form {
+    min-width: 250px;
+    min-height: 500px;
+    margin-top: 2rem;
+}
+.input-field {
+    max-width: 350px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 40px 35px;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+  }
+  
+  
+  .input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+  }
+  
+  .input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .input-field input::placeholder {
+    color:  #999999;
+    font-weight: 500;
+  }
+  
+  #SellerType {
+    position: absolute;
+    left: 15%;
+    top: 12%;
+    width: 75%;
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-weight: 500;
+    font-size: 17px;
+    height: 40px;
+    border: none;
+    background: transparent;
+  }
+  .one{
+      max-width: 775px;
+      
+  }
+  .btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    background-color: #4d84e2;
+  }
+  .title {
+    font-size: 2.2rem;
+    color: #fff;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+      width: 100%;
+  }
+  span {
+    position: absolute;
+    top: -50%;
+    left: 17px;
+    font-size: 1rem;
+    color: #F6F6F4;
+    line-height: 0.5rem;
+    font-weight: bold;
+  }
+  .Save {
+    position: relative;
+    left: 0%;
+    transform: translateX(0%);
+    color: #3685B5;
+    border: 1px solid #3685B5;
+    font-weight: 0;
+    font-size: 1rem ;
+    cursor: pointer;
+    background: #2b2e2e;
+    padding: 5px;
+    transition: 0.8s;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .Save:hover {
+    color: #fff;
+    border-color: #88CCF1;
+  }  
+  .Save::before {
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #88CCF1;
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .Save:hover::before{    
+    height: 180%;
+  }
+  .Save:hover::after {
+    width: 0%
+  }
+  
