@@ -30,7 +30,6 @@ An E-commerce website designed to allow people act as both seller and customer t
 5. Profile
 6. Product Category
 7. Seller Sign Up
-<br/>
 
 ### Seller
 1. Login & Sign Up
@@ -38,7 +37,6 @@ An E-commerce website designed to allow people act as both seller and customer t
 3. Orders
 4. Products
 5. Account
-<br/>
 
 ### Admin
 1. Login
