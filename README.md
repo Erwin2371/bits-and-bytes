@@ -46,12 +46,5 @@ An E-commerce website designed to allow people act as both seller and customer t
 5. Customer Orders
 
 
-## To Get Started
-1. To run this website a **localhost server** is required
-2. Git clone this repository
-```
-$ git clone https://github.com/Erwin2371/wdt-bits-and-bytes.git
-```
-
 
 
